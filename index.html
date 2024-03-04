@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Notenrechner Schule Burghalde</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>Notenrechner Schule Turgi/Burghalde</h1>
+        <form id="grade-form">
+            <p class="label">Zählt doppelt und die Note 4 muss erreicht werden</p>
+            <div class="subject">
+                <label for="dt">Deutsch</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('dt', -0.5)">-</button>
+                    <input type="number" id="dt" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('dt', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="ma">Mathematik</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('ma', -0.5)">-</button>
+                    <input type="number" id="ma" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('ma', 0.5)">+</button>
+                </div>
+            </div>
+            <p class="label">Zählt doppelt</p>
+            <div class="subject">
+                <label for="nt">Natur und Technik</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('nt', -0.5)">-</button>
+                    <input type="number" id="nt" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('nt', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="rz">Räume, Zeiten und Gesellschaften</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('rz', -0.5)">-</button>
+                    <input type="number" id="rz" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('rz', 0.5)">+</button>
+                </div>
+            </div>
+            <p class="label">Zählt einfach</p>
+            <div class="subject">
+                <label for="en">Englisch</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('en', -0.5)">-</button>
+                    <input type="number" id="en" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('en', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="fz">Französisch</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('fz', -0.5)">-</button>
+                    <input type="number" id="fz" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('fz', 0.5)">+</button>
+                </div>
+            </div>
+            <p class="label">Zählt ein drittel</p>
+            <div class="subject">
+                <label for="pb">Politische Bildung</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('pb', -0.5)">-</button>
+                    <input type="number" id="pb" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('pb', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="wh">Wirtschaft, Arbeit und Haushalt</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('wh', -0.5)">-</button>
+                    <input type="number" id="wh" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('wh', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="mi">Medien und Informatik</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('mi', -0.5)">-</button>
+                    <input type="number" id="mi" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('mi', 0.5)">+</button>
+                </div>
+            </div>
+            <p class="label">Zählt ein drittel oder halb wenn das Wahlpflichtfach Projekte und Recherchen ist</p>
+            <div class="subject">
+                <label for="mu">Musik</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('mu', -0.5)">-</button>
+                    <input type="number" id="mu" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('mu', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="bs">Bewegung und Sport</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('bs', -0.5)">-</button>
+                    <input type="number" id="bs" min="1" max="6" step="0.5" required>
+                    <button type="button" class="range-button" onclick="change_value('bs', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <label for="wp">Wahlpflichtfach (optional)</label>
+                <div>
+                    <button type="button" class="range-button" onclick="change_value('wp', -0.5)">-</button>
+                    <input type="number" id="wp" min="1" max="6" step="0.5">
+                    <button type="button" class="range-button" onclick="change_value('wp', 0.5)">+</button>
+                </div>
+            </div>
+            <div class="subject">
+                <button class="form-button" type="button" onclick="calculate_average()">Durchschnitt berechnen</button>
+                <button class="form-button" type="button" onclick="empty_form()">Leeren</button>
+            </div>
+        </form>
+        <div id="solution"></div>
+    </body>
+</html>
