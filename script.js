@@ -75,10 +75,29 @@ function calculate_average() {
                 
     let durchschnitt = summ / 12;
 
-    document.getElementById('solution').innerText = 'Durchschnittsnote: ' + durchschnitt.toFixed(1);
+    let solution = document.getElementById('solution')
+    solution.innerHTML = 'Durchschnittsnote: ' + durchschnitt.toFixed(1);
+
+    let school = document.getElementById("school");
+    if (durchschnitt >= 4.7) 
+        school.innerHTML = "Zu dir passt die Kanti und auch FMS/WMS/IMS und BM";
+    else if (durchschnitt >= 4.4)
+        school.innerHTML = "Zu dir passt die FMS/WMS/IMS und BM";
+    else if (durchschnitt < 4.4)
+        school.innerHTML = "Zu dir passt eien Lehere";
+
+    solution.classList.add("active");
+    school.classList.add("active");
+    window.scrollTo(0, document.body.scrollHeight);
 }
 
 function empty_form() {
     let form = document.getElementById("grade-form");
+    let school = document.getElementById("school");
+    let solution = document.getElementById('solution');
     form.reset();
+    school.innerHTML = ""
+    school.classList.remove("active");
+    solution.innerHTML = ""
+    solution.classList.remove("active");
 }
